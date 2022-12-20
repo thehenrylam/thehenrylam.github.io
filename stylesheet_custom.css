@@ -1,0 +1,136 @@
+/* Global styling */
+* {
+  font-family: "Georgia", Georgia, serif;
+}
+
+body {
+  background-color: white;
+  background-image: url("./resources/images/tiling_background_dimmed_128.png");
+  background-repeat: repeat-y repeat-x;
+  background-attachment: fixed;
+
+  padding: 0;
+  margin: 0;
+}
+
+.hero-img {
+  background-color: white;
+  background-image: url("./resources/images/hero_banner_4k.jpg");
+  background-size: cover;
+}
+
+.fill {
+  height: 100%;
+  width: 100%;
+}
+
+.padgap-l {
+  padding: 5vmin;
+}
+
+.padgap-m {
+  padding: 2.5vmin;
+}
+
+/*  This represents a full screen's worth of real-estate:
+    Typically used for:
+      - Hero banners
+      - Articles that are meant to be read all in one go
+ */
+.full-height {
+  height: 100vh;
+}
+
+/*  This represents a flexible screen that is meant to fill the reader's screen
+    Typically used for:
+      - Articles that require dedicated attention from the reader (like a chapter in a book)
+*/
+.full-height-fluid {
+  min-height: 100vh;
+}
+
+.font-color-white {
+  color: #e6e6e6;
+}
+
+.font-xl {
+  font-size: clamp(48px, 5vmax, 72px);
+  font-weight: 500;
+}
+
+.font-l {
+  font-size: clamp(28px, 3vmax, 36px);
+  font-weight: 300;
+}
+
+.font-m {
+  font-size: clamp(12px, 1vmax ,28px);
+  font-weight: 100;
+}
+
+.icon-outline {
+  border: 5px solid black;
+}
+
+.zany-shadow {
+  box-shadow: 10px 10px #FF9900;
+}
+
+.zany-shadow-text {
+  text-shadow: 2px 2px #FF9900;
+}
+
+.color-primary {
+  background-color: #0066FF;
+}
+
+.color-secondary {
+  background-color: #00FF19; 
+}
+
+.color-tertiary {
+  background-color: #FF00E6;
+}
+
+.color-complement {
+  background-color: #FF9900;
+}
+
+.dbgB_b {
+  background-color: lightblue;
+}
+
+.dbgB_o {
+  border-color: blue;
+  border-style: dotted;
+}
+
+.dbgR_b {
+  background-color: lightsalmon;
+}
+
+.dbgR_o {
+  border-color: red;
+  border-style: dotted;
+}
+
+.dbgG_b {
+  background-color: lightgreen;
+}
+
+.dbgG_o {
+  border-color: green;
+  border-style: dotted;
+}
+
+.dbgM_b {
+  background-color: pink;
+}
+
+.dbgM_o {
+  border-color: magenta;
+  border-style: dotted;
+}
+
+
+
