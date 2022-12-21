@@ -1,6 +1,24 @@
 /* Global styling */
+@font-face {
+  /* SOURCE: https://www.dafontfree.io/just-sans-font/ */
+ font-family: font-regular;
+ src: url("./resources/fonts/JUST_Sans_Regular.otf");
+}
+
+@font-face {
+  /* SOURCE: https://www.dafontfree.io/just-sans-font/ */
+  font-family: font-exbold;
+  src: url("./resources/fonts/JUST_Sans_ExBold.otf");
+}
+
+@font-face {
+  /* SOURCE: https://www.dafontfree.io/lobster-two-font/ */
+  font-family: font-fancy;
+  src: url("./resources/fonts/LobsterTwo-Regular.ttf");
+}
+
 * {
-  font-family: "Georgia", Georgia, serif;
+  font-family: font-regular;
 }
 
 body {
@@ -11,16 +29,23 @@ body {
 
   padding: 0;
   margin: 0;
+
+  height: 100%;
+}
+
+b {
+  font-family: font-exbold;
 }
 
 .hero-img {
   background-color: white;
-  background-image: url("./resources/images/hero_banner_4k.jpg");
+  background-image: url("./resources/images/hero_banner_4k.svg");
   background-size: cover;
+  background-position: center center;
 }
 
 .fill {
-  height: 100%;
+  height: 100% !important;
   width: 100%;
 }
 
@@ -47,10 +72,24 @@ body {
 */
 .full-height-fluid {
   min-height: 100vh;
+  height: auto !important; /*min-height hack*/
+  height: 100vh;            /*min-height hack*/
 }
 
 .font-color-white {
   color: #e6e6e6;
+}
+
+.font-type-regular {
+  font-family: font-regular;
+}
+
+.font-type-exbold {
+  font-family: font-exbold;
+}
+
+.font-type-fancy {
+  font-family: font-fancy;
 }
 
 .font-xl {
@@ -64,36 +103,90 @@ body {
 }
 
 .font-m {
-  font-size: clamp(12px, 1vmax ,28px);
+  font-size: clamp(20px, 2vmax ,28px);
   font-weight: 100;
 }
 
-.icon-outline {
-  border: 5px solid black;
+.font-sm {
+  font-size: clamp(16px, 1.5vmax ,20px);
+  font-weight: 100;
 }
 
-.zany-shadow {
-  box-shadow: 10px 10px #FF9900;
+.outline-white      { border: 5px solid #e6e6e6; }
+.outline-black      { border: 5px solid #000000; }
+.outline-primary    { border: 5px solid #0066FF; }
+.outline-secondary  { border: 5px solid #00FF19; }
+.outline-tertiary   { border: 5px solid #FF00E6; }
+.outline-complement { border: 5px solid #FF9900; }
+
+.shadow-white      { box-shadow: 10px 10px #e6e6e6; }
+.shadow-black      { box-shadow: 10px 10px #000000; }
+.shadow-primary    { box-shadow: 10px 10px #0066FF; }
+.shadow-secondary  { box-shadow: 10px 10px #00FF19; }
+.shadow-tertiary   { box-shadow: 10px 10px #FF00E6; }
+.shadow-complement { box-shadow: 10px 10px #FF9900; }
+
+.color-white      { background-color: #e6e6e6; }
+.color-black      { background-color: #000000; }
+.color-primary    { background-color: #0066FF; }
+.color-secondary  { background-color: #00FF19; }
+.color-tertiary   { background-color: #FF00E6; }
+.color-complement { background-color: #FF9900; }
+
+/* Neo-Brutalism Specific Styling */
+.nb-skill-tag {
+  max-width: 12em;
+  min-width: 5em;
+
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: clamp(12px, 2vmax, 24px);
+  padding-right: clamp(12px, 2vmax, 24px);
+
+  margin: 8px;
+
+  border: 5px solid #000000;
+  box-shadow: 5px 5px #000000;
+
+  background-color: #7aafff;
+ 
+  font-family: font-exbold;
+
+  display: table;
+
+  text-align: center;
+
+  font-size: clamp(16px, 1.5vmax ,20px);
+  font-weight: 100;
 }
 
-.zany-shadow-text {
-  text-shadow: 2px 2px #FF9900;
+.nb-skill-tag * {
+  font-family: font-exbold;
+  display: table-cell;
+  vertical-align: middle;
 }
 
-.color-primary {
-  background-color: #0066FF;
+.nb-skill-tag-highlight {
+  background-color: #fad398;
+  border: 5px solid #FF9900;
+
+  -webkit-animation: fadeinout 2s linear forwards;
+  animation: fadeinout 2s linear forwards;
+  animation-iteration-count: infinite;
 }
 
-.color-secondary {
-  background-color: #00FF19; 
+@-webkit-keyframes fadeinout {
+  50% { 
+    background-color: #fae698;
+    border: 5px solid #ffd000;
+  }
 }
 
-.color-tertiary {
-  background-color: #FF00E6;
-}
-
-.color-complement {
-  background-color: #FF9900;
+@keyframes fadeinout {
+  50% { 
+    background-color: #fae698;
+    border: 5px solid #ffd000;
+  }
 }
 
 .dbgB_b {
