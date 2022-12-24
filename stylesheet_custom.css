@@ -76,8 +76,12 @@ b {
   height: 100vh;            /*min-height hack*/
 }
 
-.font-color-white {
-  color: #e6e6e6;
+.align-content-center-vertical {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
 }
 
 .font-type-regular {
@@ -112,26 +116,41 @@ b {
   font-weight: 100;
 }
 
+.font-color-white           { color: #e6e6e6; }
+.font-color-black           { color: #212529; }
+.font-color-primary         { color: #0066FF; }
+.font-color-primary-dark    { color: #003585; }
+.font-color-secondary       { color: #00900E; }
+.font-color-secondary-dark  { color: #00700b; }
+.font-color-tertiary        { color: #FF00E6; }
+.font-color-tertiary-dark   { color: #88007b; }
+.font-color-complement      { color: #FF9900; }
+.font-color-complement-dark { color: #A66400; }
+
 .outline-white      { border: 5px solid #e6e6e6; }
 .outline-black      { border: 5px solid #212529; }
 .outline-primary    { border: 5px solid #0066FF; }
-.outline-secondary  { border: 5px solid #00FF19; }
+.outline-secondary  { border: 5px solid #00900E; }
 .outline-tertiary   { border: 5px solid #FF00E6; }
 .outline-complement { border: 5px solid #FF9900; }
 
 .shadow-white      { box-shadow: 10px 10px #e6e6e6; }
 .shadow-black      { box-shadow: 10px 10px #212529; }
 .shadow-primary    { box-shadow: 10px 10px #0066FF; }
-.shadow-secondary  { box-shadow: 10px 10px #00FF19; }
+.shadow-secondary  { box-shadow: 10px 10px #00900E; }
 .shadow-tertiary   { box-shadow: 10px 10px #FF00E6; }
 .shadow-complement { box-shadow: 10px 10px #FF9900; }
 
-.color-white      { background-color: #e6e6e6; }
-.color-black      { background-color: #212529; }
-.color-primary    { background-color: #0066FF; }
-.color-secondary  { background-color: #00FF19; }
-.color-tertiary   { background-color: #FF00E6; }
-.color-complement { background-color: #FF9900; }
+.color-white           { background-color: #e6e6e6; }
+.color-black           { background-color: #212529; }
+.color-primary         { background-color: #0066FF; }
+.color-primary-dark    { background-color: #003585; }
+.color-secondary       { background-color: #00900E; }
+.color-secondary-dark  { background-color: #00700b; }
+.color-tertiary        { background-color: #FF00E6; }
+.color-tertiary-dark   { background-color: #88007b; }
+.color-complement      { background-color: #FF9900; }
+.color-complement-dark { background-color: #A66400; }
 
 /* Neo-Brutalism Specific Styling */
 .nb-skill-tag {
@@ -160,6 +179,7 @@ b {
   font-weight: 100;
 }
 
+/* skill tag */
 .nb-skill-tag * {
   font-family: font-exbold;
   display: table-cell;
@@ -189,6 +209,7 @@ b {
   }
 }
 
+/* button swipe */
 button {
 	padding: 0.5em 1.5em;
 	border-width: 3px;
@@ -257,6 +278,46 @@ button.swipe-overlay:focus {
   color:#003585;
   background: #e6e6e6;
   border-color: #003585;
+}
+
+button.swipe-overlay-primary {
+  color: #0066FF;
+	border-color: #0066FF;
+}
+
+button.swipe-overlay-primary::after {
+  background: #003585;
+}
+
+button.swipe-overlay-primary:hover {
+  color: #E6E6E6;
+  border-color: #003585;
+}
+
+button.swipe-overlay-primary:focus {
+  color:#003585;
+  background: #e6e6e6;
+  border-color: #003585;
+}
+
+button.swipe-overlay-secondary {
+  color: #00900e;
+	border-color: #00900e;
+}
+
+button.swipe-overlay-secondary::after {
+  background: #00700b;
+}
+
+button.swipe-overlay-secondary:hover {
+  color: #E6E6E6;
+  border-color: #00700b;
+}
+
+button.swipe-overlay-secondary:focus {
+  color:#00700b;
+  background: #e6e6e6;
+  border-color: #00700b;
 }
 
 button.swipe-overlay:focus::after {
